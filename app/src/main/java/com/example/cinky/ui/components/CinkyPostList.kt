@@ -11,7 +11,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.cinky.data.local.LocalPostsDataProvider
 import com.example.cinky.data.model.Post
-import com.example.cinky.ui.utils.CinkyContentType
 
 @Composable
 fun CinkyPostList(

@@ -39,6 +39,6 @@ enum class CinkyNavigationContentPosition {
     TOP, CENTER
 }
 
-enum class CinkyContentType {
-    SINGLE_PANE, DUAL_PANE
+enum class CinkyOrientationStrategy {
+    VERTICAL, HORIZONTAL
 }
