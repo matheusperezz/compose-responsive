@@ -1,26 +1,17 @@
 package com.example.cinky.ui.screens.feed
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.material3.Icon
-import androidx.compose.material3.NavigationRail
-import androidx.compose.material3.NavigationRailItem
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import com.example.cinky.data.local.LocalPostsDataProvider
 import com.example.cinky.ui.components.CinkyNavigationRail
 import com.example.cinky.ui.components.CinkyPostList
 import com.example.cinky.ui.components.CinkyThreadList
-import com.example.cinky.ui.navigation.TOP_LEVEL_DESTINATIONS
+import com.example.cinky.ui.navigation.destinations
 
 @Composable
 fun CinkyFeedExpandedScreen(
@@ -32,7 +23,7 @@ fun CinkyFeedExpandedScreen(
 
     Row(modifier = modifier) {
 
-        CinkyNavigationRail(topLevelDestinations = TOP_LEVEL_DESTINATIONS, Modifier.weight(0.05f))
+        CinkyNavigationRail(topLevelDestinations = destinations, Modifier.weight(0.05f))
 
         CinkyPostList(
             posts = LocalPostsDataProvider.getAllPosts(),

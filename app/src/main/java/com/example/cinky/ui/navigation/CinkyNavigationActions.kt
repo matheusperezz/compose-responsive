@@ -5,8 +5,6 @@ import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.TipsAndUpdates
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.navigation.NavController
-import androidx.navigation.NavGraph.Companion.findStartDestination
 
 object CinkyRoute {
     const val FEED = "Relevantes"
@@ -20,7 +18,7 @@ data class CinkyTopLevelDestination(
     val iconText: String
 )
 
-val TOP_LEVEL_DESTINATIONS = listOf(
+val destinations = listOf(
     CinkyTopLevelDestination(
         route = CinkyRoute.FEED,
         selectedIcon = Icons.Default.Home,

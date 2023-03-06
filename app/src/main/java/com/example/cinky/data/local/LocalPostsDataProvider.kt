@@ -7,20 +7,20 @@ object LocalPostsDataProvider {
     private val allPosts = listOf(
         Post(
             id = 1L,
-            title = "Fazendo um testeFazendo um testeFazendo um teste",
+            title = LoremIpsum(10).values.first().toString(),
             content = LoremIpsum(20).values.first().toString(),
             creator = LocalAccountsDataProvider.getUserByID(1L),
             threads = listOf(
                 Post(
                     id = 6L,
-                    title = "Fazendo um testeFazendo um testeFazendo um teste",
+                    title = LoremIpsum(10).values.first().toString(),
                     content = LoremIpsum(20).values.first().toString(),
                     creator = LocalAccountsDataProvider.getUserByID(2L),
                     createdAt = "2 horas atrás"
                 ),
                 Post(
                     id = 7L,
-                    title = "Fazendo um testeFazendo um testeFazendo um teste",
+                    title = LoremIpsum(10).values.first().toString(),
                     content = LoremIpsum(20).values.first().toString(),
                     creator = LocalAccountsDataProvider.getUserByID(3L),
                     createdAt = "2 horas atrás"
@@ -30,50 +30,72 @@ object LocalPostsDataProvider {
         ),
         Post(
             id = 2L,
-            title = "Fazendo um testeFazendo um testeFazendo um teste",
+            title = LoremIpsum(10).values.first().toString(),
             content = LoremIpsum(20).values.first().toString(),
             creator = LocalAccountsDataProvider.getUserByID(3L),
             threads = listOf(
                 Post(
                     id = 8L,
-                    title = "Fazendo um testeFazendo um testeFazendo um teste",
+                    title = LoremIpsum(10).values.first().toString(),
+                    content = LoremIpsum(20).values.first().toString(),
+                    creator = LocalAccountsDataProvider.getUserByID(2L),
+                    createdAt = "3 horas atrás"
+                ),
+                Post(
+                    id = 9L,
+                    title = LoremIpsum(10).values.first().toString(),
                     content = LoremIpsum(20).values.first().toString(),
                     creator = LocalAccountsDataProvider.getUserByID(1L),
                     createdAt = "2 horas atrás"
                 ),
                 Post(
-                    id = 9L,
-                    title = "Fazendo um testeFazendo um testeFazendo um teste",
+                    id = 10L,
+                    title = LoremIpsum(10).values.first().toString(),
+                    content = LoremIpsum(20).values.first().toString(),
+                    creator = LocalAccountsDataProvider.getUserByID(2L),
+                    createdAt = "1 horas atrás"
+                ),
+                Post(
+                    id = 11L,
+                    title = LoremIpsum(10).values.first().toString(),
                     content = LoremIpsum(20).values.first().toString(),
                     creator = LocalAccountsDataProvider.getUserByID(1L),
-                    createdAt = "2 horas atrás"
+                    createdAt = "25 minutos atrás"
                 ),
             ),
-            createdAt = "2 horas atrás"
+            createdAt = "4 horas atrás"
         ),
         Post(
             id = 3L,
-            title = "Fazendo um testeFazendo um testeFazendo um teste",
+            title = LoremIpsum(10).values.first().toString(),
             content = LoremIpsum(20).values.first().toString(),
             creator = LocalAccountsDataProvider.getUserByID(2L),
-            createdAt = "2 horas atrás"
+            threads = listOf(
+                Post(
+                    id = 12L,
+                    title = LoremIpsum(10).values.first().toString(),
+                    content = LoremIpsum(20).values.first().toString(),
+                    creator = LocalAccountsDataProvider.getUserByID(3L),
+                    createdAt = "2 horas atrás"
+                ),
+            ),
+            createdAt = "5 horas atrás"
         ),
         Post(
             id = 4L,
-            title = "Fazendo um testeFazendo um testeFazendo um teste",
+            title = LoremIpsum(10).values.first().toString(),
             content = LoremIpsum(20).values.first().toString(),
             creator = LocalAccountsDataProvider.getUserByID(3L),
             createdAt = "2 horas atrás"
         ),
         Post(
             id = 5L,
-            title = "Fazendo um testeFazendo um testeFazendo um teste",
+            title = LoremIpsum(10).values.first().toString(),
             content = LoremIpsum(20).values.first().toString(),
             creator = LocalAccountsDataProvider.getUserByID(1L),
-            createdAt = "2 horas atrás"
+            createdAt = "5 dias atrás"
         ),
-
-        )
+    )
 
     fun getAllPosts(): List<Post> = allPosts
 

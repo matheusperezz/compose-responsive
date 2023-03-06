@@ -7,7 +7,7 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.example.cinky.ui.navigation.CinkyTopLevelDestination
-import com.example.cinky.ui.navigation.TOP_LEVEL_DESTINATIONS
+import com.example.cinky.ui.navigation.destinations
 
 @Composable
 fun CinkyBottomNavigationBar(
@@ -17,7 +17,7 @@ fun CinkyBottomNavigationBar(
     NavigationBar(
         modifier = Modifier.fillMaxWidth()
     ) {
-        TOP_LEVEL_DESTINATIONS.forEach { destination ->
+        destinations.forEach { destination ->
             NavigationBarItem(
                 selected = selectedDestination == destination.route,
                 onClick = { navigationTopLevelDestination(destination) },
