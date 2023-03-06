@@ -22,7 +22,7 @@ fun CinkyNavigationRail(
         topLevelDestinations.forEach {
             NavigationRailItem(
                 selected = false,
-                onClick = { /*TODO*/ },
+                onClick = {  },
                 icon = {
                     Icon(imageVector = it.selectedIcon, contentDescription = null)
                 },

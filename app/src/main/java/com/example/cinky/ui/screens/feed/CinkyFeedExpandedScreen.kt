@@ -31,19 +31,7 @@ fun CinkyFeedExpandedScreen(
     val postSelected = remember { mutableStateOf(1L) }
 
     Row(modifier = modifier) {
-//        NavigationRail(Modifier.weight(0.05f)) {
-//            TOP_LEVEL_DESTINATIONS.forEach {
-//                NavigationRailItem(
-//                    selected = false,
-//                    onClick = { /*TODO*/ },
-//                    icon = {
-//                        Icon(imageVector = it.selectedIcon, contentDescription = null)
-//                    },
-//                    label = {
-//                        Text(text = it.iconText)
-//                    })
-//            }
-//        }
+
         CinkyNavigationRail(topLevelDestinations = TOP_LEVEL_DESTINATIONS, Modifier.weight(0.05f))
 
         CinkyPostList(
