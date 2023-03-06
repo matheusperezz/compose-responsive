@@ -32,7 +32,7 @@ fun CinkyThreadList(
         Box {
             LazyColumn(modifier = Modifier.fillMaxSize(), state = threadLazyListState) {
                 items(threads){ thread ->
-                    CinkyPostThreadItem(post = thread)
+                    CinkyThreadItem(post = thread)
                 }
             }
         }

@@ -14,7 +14,7 @@ fun CinkyFeedCompactScreen(
     modifier: Modifier = Modifier
 ) {
 
-    Column {
+    Column(modifier = modifier) {
         CinkyPostList(
             posts = LocalPostsDataProvider.getAllPosts(),
             postLazyListState = postLazyListState,

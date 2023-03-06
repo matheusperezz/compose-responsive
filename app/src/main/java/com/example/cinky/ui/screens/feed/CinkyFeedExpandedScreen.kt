@@ -28,22 +28,23 @@ fun CinkyFeedExpandedScreen(
     postLazyListState: LazyListState,
 ) {
 
-    var postSelected = remember { mutableStateOf(1L) }
+    val postSelected = remember { mutableStateOf(1L) }
 
-    Row {
-        NavigationRail(Modifier.weight(0.1f)) {
-            TOP_LEVEL_DESTINATIONS.forEach {
-                NavigationRailItem(
-                    selected = false,
-                    onClick = { /*TODO*/ },
-                    icon = {
-                        Icon(imageVector = it.selectedIcon, contentDescription = null)
-                    },
-                    label = {
-                        Text(text = it.iconText)
-                    })
-            }
-        }
+    Row(modifier = modifier) {
+//        NavigationRail(Modifier.weight(0.05f)) {
+//            TOP_LEVEL_DESTINATIONS.forEach {
+//                NavigationRailItem(
+//                    selected = false,
+//                    onClick = { /*TODO*/ },
+//                    icon = {
+//                        Icon(imageVector = it.selectedIcon, contentDescription = null)
+//                    },
+//                    label = {
+//                        Text(text = it.iconText)
+//                    })
+//            }
+//        }
+        CinkyNavigationRail(topLevelDestinations = TOP_LEVEL_DESTINATIONS, Modifier.weight(0.05f))
 
         CinkyPostList(
             posts = LocalPostsDataProvider.getAllPosts(),
@@ -51,7 +52,7 @@ fun CinkyFeedExpandedScreen(
             onClick = {
                 postSelected.value = it.id
             },
-            modifier = Modifier.weight(0.4f)
+            modifier = Modifier.weight(0.45f)
         )
 
         CinkyThreadList(

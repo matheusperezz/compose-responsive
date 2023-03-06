@@ -14,31 +14,11 @@ object CinkyRoute {
     const val SEARCH = "Procurar"
 }
 
-sealed class AppDestination(val route: String){
-    object Feed: AppDestination("feed")
-    object Recent: AppDestination("recent")
-    object Search: AppDestination("search")
-    object Threads: AppDestination("threads")
-    object Details: AppDestination("details")
-}
-
 data class CinkyTopLevelDestination(
     val route: String,
     val selectedIcon: ImageVector,
     val iconText: String
 )
-
-class CinkyNavigationActions(private val navController: NavController){
-    fun navigateTo(destination: CinkyTopLevelDestination){
-        navController.navigate(destination.route){
-            popUpTo(navController.graph.findStartDestination().id){
-                saveState = true
-            }
-            launchSingleTop = true
-            restoreState = true
-        }
-    }
-}
 
 val TOP_LEVEL_DESTINATIONS = listOf(
     CinkyTopLevelDestination(

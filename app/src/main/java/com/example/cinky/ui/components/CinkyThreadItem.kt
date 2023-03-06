@@ -26,7 +26,7 @@ import com.example.cinky.data.local.LocalPostsDataProvider
 import com.example.cinky.data.model.Post
 
 @Composable
-fun CinkyPostThreadItem(
+fun CinkyThreadItem(
     post: Post,
     modifier: Modifier = Modifier
 ) {
@@ -105,5 +105,5 @@ fun CinkyPostThreadItem(
 @Preview
 @Composable
 fun CinkyPostThreadItemPreview() {
-    CinkyPostThreadItem(post = LocalPostsDataProvider.getPostById(1L))
+    CinkyThreadItem(post = LocalPostsDataProvider.getPostById(1L))
 }

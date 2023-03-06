@@ -77,8 +77,6 @@ object LocalPostsDataProvider {
 
     fun getAllPosts(): List<Post> = allPosts
 
-    fun getPostsSize(): Int = getAllPosts().size
-
     fun getPostById(postId: Long): Post {
         return allPosts.first { it.id == postId }
     }

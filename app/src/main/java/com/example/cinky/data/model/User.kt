@@ -6,6 +6,4 @@ data class User(
     val lastName: String,
     val email: String,
     val userName: String,
-) {
-    val fullName: String = "$firstName $lastName"
-}
+)

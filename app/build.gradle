@@ -57,11 +57,20 @@ dependencies {
     implementation 'androidx.compose.ui:ui-tooling-preview'
     implementation 'androidx.compose.material3:material3'
 
+    // Suporte para diferentes tamanhos de tela no Compose
     implementation 'androidx.compose.material3:material3-window-size-class'
+
+    // Componentes compose para diferentes tipos de dispositivos
     implementation 'com.google.accompanist:accompanist-adaptive:0.26.3-beta'
+
+    // Navegação no compose
     implementation 'androidx.navigation:navigation-compose:2.5.3'
-    implementation "androidx.compose.material:material-icons-extended:"
-    implementation("androidx.window:window:1.0.0")
+
+    // Coleção de icones do Material Design
+    implementation 'androidx.compose.material:material-icons-extended:'
+
+    // Suporte para personalização de comportamento da tela, como tamanho e orientação
+    implementation 'androidx.window:window:1.0.0'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

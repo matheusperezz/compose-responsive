@@ -27,9 +27,6 @@ object LocalAccountsDataProvider {
         )
     )
 
-
-    fun getAllUsers(): List<User> = allUsersAccounts
-
     fun getUserByID(userId: Long): User {
         return allUsersAccounts.first { it.id == userId }
     }
